@@ -1,0 +1,45 @@
+root:
+  groups:
+    -
+      tags: []
+      phrases:
+        - "[cap :sentence]. [cap :sentence]. [cap :sentence]. [cap :sentence]"
+sentence:
+  groups:
+    -
+      tags: []
+      phrases:
+        - "the [:noun] [:verb_past] the [:noun]"
+noun:
+  groups:
+    -
+      tags:
+        - ['living', 'human']
+      phrases:
+        - "firefighter"
+        - "teacher"
+        - "doctor"
+    -
+      tags:
+        - ['living', 'animal']
+      phrases:
+        - "cat"
+        - "dog"
+        - "rabbit"
+verb_past:
+  groups:
+    -
+      tags:
+        - ['living', 'human']
+      phrases:
+        - "read"
+        - "watched"
+        - "talked to"
+        - "saved"
+    -
+      tags:
+        - ['living', 'animal']
+      phrases:
+        - "chased"
+        - "watched"
+        - "followed"

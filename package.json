@@ -1,0 +1,14 @@
+{
+  "name": "nanogenmo2017",
+  "version": "1.0.0",
+  "description": "A program to procedurally generate a 50k word novel for National Novel Generation Month 2017.",
+  "main": "index.js",
+  "repository": "https://github.com/audiodude/nanogenmo2017",
+  "author": "Travis Briggs <audiodude@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "fs-jetpack": "^1.2.0",
+    "improv": "^1.0.0",
+    "js-yaml": "^3.10.0"
+  }
+}
