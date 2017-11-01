@@ -3,28 +3,22 @@ root:
     -
       tags: []
       phrases:
-        - "[cap :sentence]. [cap :sentence]. [cap :sentence]. [cap :sentence]."
-
-sentence:
-  groups:
-    -
-      tags: []
-      phrases:
-        - "[:frag]" 
-        - "while [:frag], [:frag]"
+        - "[cap :frag]." 
+        - "While [:frag], [:frag]."
 
 frag:
   groups:
     -
       tags: []
       phrases:
-        - "[:subject] [:progressive_to_be] [:verb]"
+        - "[:subject] [:progressive_verb]"
         - "[:subject] [:verb] [:object]"
 
 subject:
   groups:
     -
-      tags: ["subject", "singular"]
+      tags:
+        - ["subject", "singular"]
       phrases:
         - "I"
         - "he"
@@ -33,7 +27,8 @@ subject:
 object:
   groups:
     -
-      tags: ["object", "singular"]
+      tags:
+        - ["object", "singular"]
       phrases:
         - "the shed"
         - "the bike"
@@ -44,7 +39,6 @@ verb:
   groups:
     -
       tags:
-        - ["verb", "past tense"]
         - ["subject", "singular"]
       phrases:
         - "read"
@@ -52,22 +46,16 @@ verb:
         - "talked to"
         - "helped"
         - -painted"
-    -
-      tags:
-        - ["verb", "progressive tense"]
-        - ["subject", "singular"]
-      phrases:
-        - "chasing"
-        - "watching"
-        - "following"
-        - "eyeing"
-        - "painting"
-        - "helping"
 
-progressive_to_be:
+progressive_verb:
   groups:
     -
       tags:
-        - ["verb", "progressive tense"]
         - ["subject", "singular"]
-      phrases: ["was"]
+      phrases:
+        - "was chasing"
+        - "was watching"
+        - "was following"
+        - "was eyeing"
+        - "was painting"
+        - "was helping"

@@ -9,9 +9,9 @@ const grammarData = yaml.load(fs.read('grammar.yaml'));
 const generator = new Improv(grammarData, {
   filters: [
     Improv.filters.mismatchFilter(),
-    Improv.filters.partialBonus(),
-    Improv.filters.fullBonus(),
-    Improv.filters.dryness()
+    // Improv.filters.partialBonus(),
+    // Improv.filters.fullBonus(),
+    // Improv.filters.dryness()
   ],
   reincorporate: true
 });
