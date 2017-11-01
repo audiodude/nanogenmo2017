@@ -3,43 +3,71 @@ root:
     -
       tags: []
       phrases:
-        - "[cap :sentence]. [cap :sentence]. [cap :sentence]. [cap :sentence]"
+        - "[cap :sentence]. [cap :sentence]. [cap :sentence]. [cap :sentence]."
+
 sentence:
   groups:
     -
       tags: []
       phrases:
-        - "the [:noun] [:verb_past] the [:noun]"
-noun:
+        - "[:frag]" 
+        - "while [:frag], [:frag]"
+
+frag:
+  groups:
+    -
+      tags: []
+      phrases:
+        - "[:subject] [:progressive_to_be] [:verb]"
+        - "[:subject] [:verb] [:object]"
+
+subject:
+  groups:
+    -
+      tags: ["subject", "singular"]
+      phrases:
+        - "I"
+        - "he"
+        - "she"
+
+object:
+  groups:
+    -
+      tags: ["object", "singular"]
+      phrases:
+        - "the shed"
+        - "the bike"
+        - "my shoe"
+        - "a picture"
+
+verb:
   groups:
     -
       tags:
-        - ['living', 'human']
-      phrases:
-        - "firefighter"
-        - "teacher"
-        - "doctor"
-    -
-      tags:
-        - ['living', 'animal']
-      phrases:
-        - "cat"
-        - "dog"
-        - "rabbit"
-verb_past:
-  groups:
-    -
-      tags:
-        - ['living', 'human']
+        - ["verb", "past tense"]
+        - ["subject", "singular"]
       phrases:
         - "read"
         - "watched"
         - "talked to"
-        - "saved"
+        - "helped"
+        - -painted"
     -
       tags:
-        - ['living', 'animal']
+        - ["verb", "progressive tense"]
+        - ["subject", "singular"]
       phrases:
-        - "chased"
-        - "watched"
-        - "followed"
+        - "chasing"
+        - "watching"
+        - "following"
+        - "eyeing"
+        - "painting"
+        - "helping"
+
+progressive_to_be:
+  groups:
+    -
+      tags:
+        - ["verb", "progressive tense"]
+        - ["subject", "singular"]
+      phrases: ["was"]
